@@ -1,0 +1,7 @@
+-->create table login(username varchar(50),password varchar(50),contact varchar(10));
+-->create table jeans(Code varchar(50) primary key,MRP int(8),Quantity int(10),CP int (8));
+-->create table jeanssize(Size varchar(5),Quantity int(10),Code varchar(50), foreign key(Code) references jeans(Code));
+-->create table trouser(Code varchar(50) primary key,MRP int(10),Quantity int(10),CP int(10));
+-->create table trousersize(Size varchar(5),Quantity int(10),Code varchar(50), foreign key(Code) references trouser(Code));
+-->create table undergarments(Item varchar(50) primary key,Quantity int(10));
+-->create table undergarmentssize(size varchar(10),MRP int(10),Quantity int(10),CP int(10),Item varchar(50), foreign key(Item) references undergarments(Item));
